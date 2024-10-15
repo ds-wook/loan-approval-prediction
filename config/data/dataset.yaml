@@ -1,0 +1,4 @@
+path: input/loan-approval-prediction
+train: train.csv
+test: test.csv
+target: loan_status
