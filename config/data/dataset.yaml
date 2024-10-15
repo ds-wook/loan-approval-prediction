@@ -1,4 +1,5 @@
 path: input/loan-approval-prediction
-train: train.csv
-test: test.csv
+train: train
+test: test
 target: loan_status
+n_splits: 5

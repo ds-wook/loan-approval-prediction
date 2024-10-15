@@ -96,6 +96,7 @@ markupsafe==3.0.1
     # via jinja2
 matplotlib==3.9.2
     # via catboost
+    # via seaborn
 matplotlib-inline==0.1.7
     # via ipykernel
     # via ipython
@@ -111,6 +112,7 @@ numpy==1.26.4
     # via pyarrow
     # via scikit-learn
     # via scipy
+    # via seaborn
     # via xgboost
 nvidia-nccl-cu12==2.23.4
     # via xgboost
@@ -126,6 +128,7 @@ pandas==2.2.3
     # via catboost
     # via fastparquet
     # via loan-approval-prediction
+    # via seaborn
 parso==0.8.4
     # via jedi
 pexpect==4.9.0
@@ -181,6 +184,8 @@ scipy==1.14.1
     # via lightgbm
     # via scikit-learn
     # via xgboost
+seaborn==0.13.2
+    # via loan-approval-prediction
 six==1.16.0
     # via asttokens
     # via catboost
