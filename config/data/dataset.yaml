@@ -1,5 +1,7 @@
 path: input/loan-approval-prediction
-train: train
-test: test
+train: train_features
+test: test_features
 target: loan_status
 n_splits: 5
+encoder: res/data/
+seed: 1119
