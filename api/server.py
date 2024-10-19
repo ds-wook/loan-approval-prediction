@@ -14,7 +14,7 @@ from api.routers.index import index_router
 app = FastAPI(docs_url="/docs", openapi_url="/open-api-docs")
 # /api라는 경로로 index_router를 붙인다.
 app.include_router(index_router, prefix="/app")
-templates = Jinja2Templates(directory="app/templates")
+templates = Jinja2Templates(directory="api/templates")
 
 
 @app.get("/", response_class=HTMLResponse)
