@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실시간 알림 대시보드</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #fff236f6;
+            color: #000000;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        #notifications {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #333;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>실시간 알림 대시보드</h1>
+</header>
+
+<div id="notifications">
+    <!-- 수신한 알림이 여기에 표시됩니다. -->
+</div>
+
+<script>
+    // WebSocket 연결 생성
+    const socket = new WebSocket("ws://127.0.0.1:8000/ws/notifications");
+
+    // WebSocket이 열리면 연결된 경우의 처리
+    socket.onopen = function(event) {
+        console.log("WebSocket 연결이 열렸습니다.");
+    };
+
+    // 메시지를 수신하면 이 함수가 호출됩니다.
+    socket.onmessage = function(event) {
+        const data = JSON.parse(event.data);
+        const notificationsDiv = document.getElementById("notifications");
+        
+        // 수신한 메시지를 대시보드에 추가
+        notificationsDiv.innerHTML += `<p>${data.message}</p>`;
+    };
+
+    // 오류가 발생하면 이 함수가 호출됩니다.
+    socket.onerror = function(error) {
+        console.error("WebSocket 오류:", error);
+    };
+
+    // 연결이 닫히면 이 함수가 호출됩니다.
+    socket.onclose = function(event) {
+        console.log("WebSocket 연결이 닫혔습니다.");
+    };
+</script>
+
+</body>
+</html>

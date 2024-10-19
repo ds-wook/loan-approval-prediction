@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            background-color: #fff236f6;
+            color: #000000;
+            padding: 20px 0;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+        }
+        button {
+            background-color: #ff9900;
+            color: white;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #e68a00;
+        }
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Hello server</h1>
+</header>
+
+<p>API 서버 입니다.<br>
+서버가 구동 중입니다.</p>
+
+<!-- 대시보드로 이동하는 버튼 -->
+<button onclick="goToDashboard()">대시보드로 이동</button>
+
+<script>
+    function goToDashboard() {
+        window.location.href = "/dashboard";
+    }
+</script>
+
+</body>
+</html>
