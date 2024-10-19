@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.routers.loan import loan_router
+from api.routers.loan import loan_router
 
 index_router = router = APIRouter()
 

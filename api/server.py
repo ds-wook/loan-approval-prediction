@@ -8,7 +8,7 @@ from fastapi import FastAPI, Request, WebSocket
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
-from app.routers.index import index_router
+from api.routers.index import index_router
 
 # FastAPI 객체 생성
 app = FastAPI(docs_url="/docs", openapi_url="/open-api-docs")

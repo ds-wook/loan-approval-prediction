@@ -1,7 +1,7 @@
 from fastapi import APIRouter
 
-from app.dto.loan import LoanApprovalDto
-from app.service.loan import run_model
+from api.dto.loan import LoanApprovalDto
+from api.service.loan import run_model
 
 loan_router = router = APIRouter()
 

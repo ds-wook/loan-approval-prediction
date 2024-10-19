@@ -5,7 +5,7 @@ from typing import List
 import lightgbm as lgb
 import pandas as pd
 
-from app.dto.loan import LoanApprovalDto
+from api.dto.loan import LoanApprovalDto
 
 
 async def run_model(data: LoanApprovalDto) -> List[float]:
